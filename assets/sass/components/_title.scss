@@ -1,0 +1,54 @@
+@use '../base/mixins';
+@use '../base/variables';
+
+.group__title {
+    @include mixins.flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: variables.$font-medium;
+    margin-bottom: variables.$mb-2;
+
+    .icon {
+        color: variables.$secondary-color;
+        font-size: variables.$h1-font-size;
+        @include mixins.flex;
+        align-items: center;
+    }
+
+    .text {
+        font-size: variables.$h2-font-size;
+    }
+}
+
+.text__title {
+    font-size: variables.$biggest-font;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    span {
+        font-style: italic;
+        color: variables.$secondary-color;
+        font-weight: variables.$font-medium;
+    }
+}
+
+@media (max-width: 1024px) {
+    .text__title {
+        font-size: variables.$h1-font-size;
+    }
+
+    .group__title {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio__titles,
+    .services__titles,
+    .footer__titles {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+}

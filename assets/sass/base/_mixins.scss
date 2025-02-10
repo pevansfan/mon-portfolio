@@ -1,0 +1,56 @@
+@use '../base/variables';
+
+/* Mixins (voir _mixins.scss) */
+@mixin button($bg-color, $text-color, $font-size) {
+    background: $bg-color;
+    color: $text-color;
+    font-size: $font-size;
+    border: none;
+    border-radius: variables.$radius;
+    width: fit-content;
+    cursor: pointer;
+    gap: 20px;
+    padding: 5px;
+}
+
+@mixin icon($bg-color, $text-color, $font-size) {
+    @include flex;
+    @include button($bg-color, $text-color, $font-size);
+    align-items: center;
+}
+
+
+// @mixin button-icon($bg-color, $text-color, $font-size) {
+//     @include mixins.flex;
+//     gap: 20px;
+//     @include mixins.button($bg-color, $text-color, $font-size);
+//     padding: 5px;
+
+//     span:first-child {
+//         @include mixins.flex;
+//         @include mixins.button($bg-color, $text-color, $font-size);
+//         padding: 15px 20px;
+//         align-items: center;
+//     }
+
+//     span:last-child {
+//         @include mixins.flex;
+//         @include mixins.button($bg-color, $text-color, $font-size);
+//         padding: 10px 15px;
+//         align-items: center;
+//     }
+
+//     a {
+//         @include mixins.flex;
+//         align-items: center;
+//     }
+// }
+
+@mixin grid ($number, $value) {
+    display: grid;
+    grid-template-columns: repeat($number, $value);
+}
+
+@mixin flex {
+    display: flex;
+}

@@ -1,0 +1,108 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.hire {
+    padding: 30px;
+    .text__title {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: variables.$mb-2;
+    }
+
+    .btn-contact {
+        @include mixins.flex;
+        margin-left: auto;
+        margin-right: auto;
+        @include mixins.button(variables.$secondary-color, variables.$primary-color, variables.$normal-font-size);
+
+        span:first-child {
+            @include mixins.icon(variables.$primary-color, variables.$background-color, variables.$normal-font-size);
+            padding: 15px 30px;
+        }
+
+        span:last-child {
+            @include mixins.icon(variables.$background-color, variables.$primary-color, variables.$h2-font-size);
+            padding: 15px;
+        }
+
+        a {
+            @include mixins.flex;
+            align-items: center;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.contact {
+    background-color: variables.$primary-color;
+    color: variables.$background-color;
+
+    .group__title,
+    .text__title {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: variables.$mb-2;
+    }
+
+    .group__title {
+        margin-bottom: variables.$mb-2;
+    }
+
+    &__description {
+        text-align: center;
+        margin-bottom: variables.$mb-3;
+    }
+
+    &__medias {
+        @include mixins.grid(3, 1fr);
+        align-items: center;
+        gap: 30px;
+
+        .media {
+            background-color: variables.$secondary-color;
+            height: 250px;
+            padding: 20px;
+            @include mixins.flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            color: variables.$principal-text-color;
+
+            &__icon {
+                margin-bottom: variables.$mb-1;
+                ion-icon {
+                    font-size: variables.$h1-font-size;
+                }
+            }
+
+            &__title {
+                font-weight: variables.$font-medium;
+                margin-bottom: variables.$mb-0-5;
+            }
+
+            &__data {
+                margin-bottom: variables.$mb-1-5;
+            }
+
+            &__button a {
+                @include mixins.flex;
+                align-items: center;
+                gap: 10px;
+                color: variables.$primary-color;
+                font-weight: 900;
+
+                ion-icon {
+                    transition: transform .3s;
+                }
+            }
+
+            &__button a:hover ion-icon {
+                transform: translateX(5px);
+            }
+        }
+    }
+}

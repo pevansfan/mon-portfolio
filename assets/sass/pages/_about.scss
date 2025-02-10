@@ -1,0 +1,152 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.about {
+    background-color: variables.$primary-color;
+    @include mixins.flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    color: variables.$background-color;
+
+    &__img {
+        background-color: variables.$secondary-color;
+        border-radius: 50%;
+
+        img {
+            padding-top: 30px;
+        }
+    }
+
+    .text__title {
+        margin-bottom: variables.$mb-2;
+    }
+
+    &__presentation {
+
+        &-description {
+            margin-bottom: variables.$mb-1-5;
+        }
+
+        &-infos {
+            @include mixins.grid(3, 1fr);
+            align-items: center;
+            gap: 20px;
+            margin-bottom: variables.$mb-2;
+
+            .info {
+                h2 {
+                    font-size: variables.$h1-font-size;
+                    color: variables.$secondary-color;
+                    margin-bottom: variables.$mb-1;
+                }
+            }
+        }
+
+        &-button {
+            @include mixins.flex;
+            align-items: center;
+            gap: 100px;
+
+            .btn-cv {
+                @include mixins.flex;
+                @include mixins.button(variables.$secondary-color, variables.$primary-color, variables.$normal-font-size);
+
+                span:first-child {
+                    @include mixins.icon(variables.$primary-color, variables.$background-color, variables.$normal-font-size);
+                    padding: 15px 30px;
+                }
+
+                span:last-child {
+                    @include mixins.icon(variables.$background-color, variables.$primary-color, variables.$h2-font-size);
+                    padding: 15px;
+                }
+
+                a {
+                    @include mixins.flex;
+                    align-items: center;
+                }
+            }
+
+            p {
+                font-family: "Dancing Script", serif;
+                font-size: variables.$h1-font-size;
+                color: variables.$secondary-color;
+            }
+        }
+
+    }
+}
+
+.languages {
+    @include mixins.flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .text__title {
+        margin-bottom: variables.$mb-3;
+    }
+
+    &__container {
+        @include mixins.grid(3, 1fr);
+        align-items: center;
+        gap: 100px;
+
+        .card {
+
+            &__img {
+                margin-bottom: variables.$mb-1-5;
+
+                img {
+                    background-color: variables.$grey-color;
+                    border-radius: 20%;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
+
+.card__container {
+    display: flex;
+    padding: 50px 0;
+    border-radius: 8px;
+    background: #fff;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circular-progress {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.progress-value {
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: variables.$secondary-color;
+}
+
+.language-text {
+    font-size: 30px;
+    font-weight: 500;
+    color: #606060;
+}

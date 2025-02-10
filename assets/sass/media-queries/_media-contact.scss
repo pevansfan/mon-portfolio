@@ -1,0 +1,7 @@
+@use '../base/mixins';
+
+@media (max-width: 768px) {
+    .contact__medias {
+        @include mixins.grid(1, 1fr);
+    }
+}

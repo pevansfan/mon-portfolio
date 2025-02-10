@@ -1,0 +1,13 @@
+.section {
+    padding: 100px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+@media (max-width: 1200px) {
+    .section {
+        padding: 50px;
+    }
+}

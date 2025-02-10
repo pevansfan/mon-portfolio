@@ -1,0 +1,98 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.footer {
+    padding: 50px;
+
+    &__titles {
+        @include mixins.flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 50px;
+        border-bottom: 2px solid variables.$grey-color;
+
+        .btn-footer {
+            @include mixins.flex;
+            @include mixins.button(variables.$secondary-color, variables.$primary-color, variables.$normal-font-size);
+
+            span:first-child {
+                @include mixins.icon(variables.$primary-color, variables.$background-color, variables.$normal-font-size);
+                padding: 15px 30px;
+            }
+
+            span:last-child {
+                @include mixins.icon(variables.$background-color, variables.$primary-color, variables.$h2-font-size);
+                padding: 15px;
+            }
+
+            a {
+                @include mixins.flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__container {
+        @include mixins.flex;
+        gap: 50px;
+        justify-content: space-between;
+
+        padding-top: 50px;
+
+        .col {
+            max-width: 600px;
+            h2 {
+                color: variables.$secondary-color;
+                margin-bottom: variables.$mb-2;
+            }
+            .logos {
+                @include mixins.flex;
+                align-items: center;
+                column-gap: 30px;
+                margin-bottom: variables.$mb-1-5;
+
+                .logo {
+                    @include mixins.button(variables.$secondary-color, variables.$principal-text-color, variables.$h3-font-size);
+                    padding: 15px 20px;
+                    font-weight: variables.$font-bold;
+                }
+
+                .text {
+                    font-size: variables.$h2-font-size;
+                    font-weight: variables.$font-medium;
+
+                    span {
+                        color: variables.$secondary-color;
+                    }
+                }
+
+            }
+            .my-description p{
+                font-size: variables.$normal-font-size;
+                margin-bottom: variables.$mb-1-5;
+            }
+
+            .social-medias {
+                .medias-list {
+                    @include mixins.flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    li a {
+                        @include mixins.icon(variables.$secondary-color, variables.$principal-text-color, variables.$normal-font-size);
+                    }
+                }
+            }
+
+            .footer-nav,
+            .footer-contact {
+                @include mixins.flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+
+    }
+}

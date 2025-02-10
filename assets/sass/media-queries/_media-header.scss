@@ -1,0 +1,59 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+/* Icône burger */
+.burger-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Styles du menu burger */
+@media (max-width: 1400px) {
+    .theme {
+        justify-content: center;
+    }
+    .burger-icon {
+        color: variables.$primary-color;
+    }
+
+    .header__nav {
+        background-color: variables.$background-color;
+    }
+
+    .header .logo,
+    .header .text {
+        display: none;
+    }
+
+    .header__nav-list {
+        position: absolute;
+        display: flex;
+        right: -3000px;
+        /* Menu caché à droite */
+        top: 70px;
+        flex-direction: column;
+        text-align: center;
+        background-color: variables.$primary-color;
+        width: 100%;
+        padding: 20px;
+        gap: 20px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        transition: all .5s;
+    }
+
+    /* Affichage de l'icône burger */
+    .burger-icon {
+        display: block;
+    }
+
+    .header__nav-button {
+        display: none;
+    }
+
+    .header__nav-list.burger-active {
+        right: 0;
+        /* Le menu se déplace à gauche lorsqu'il est actif */
+    }
+}

@@ -1,0 +1,33 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.portfolio {
+    background-color: variables.$grey-color;
+
+    &__titles {
+        @include mixins.flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: variables.$mb-3;
+
+        .btn-services {
+            @include mixins.flex;
+            @include mixins.button(variables.$secondary-color, variables.$primary-color, variables.$normal-font-size);
+
+            span:first-child {
+                @include mixins.icon(variables.$primary-color, variables.$background-color, variables.$normal-font-size);
+                padding: 15px 30px;
+            }
+
+            span:last-child {
+                @include mixins.icon(variables.$background-color, variables.$primary-color, variables.$h2-font-size);
+                padding: 15px;
+            }
+
+            a {
+                @include mixins.flex;
+                align-items: center;
+            }
+        }
+    }
+}

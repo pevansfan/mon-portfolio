@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+    <!-- Lien vers le CSS de Swiper -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+</head>
+
+<body>
+    <a href="#" class="scroll-top"><ion-icon name="arrow-up-outline"></ion-icon></a>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__nav-logos">
+                <div class="logo">E</div>
+                <p class="text">Evans<span>.</span></p>
+            </div>
+            <ul class="header__nav-list">
+                <li class="element"><a href="#home">Accueil</a></li>
+                <li class="element"><a href="#services">Services</a></li>
+                <li class="element"><a href="#about">À propos de</a></li>
+                <li class="element"><a href="#projects">Projects</a></li>
+                <li class="element"><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="header__nav-button"><a href="#contact">Contactez-moi</a></div>
+
+            <!-- Icone du menu burger (Ionicon) -->
+            <ion-icon name="menu-outline" class="burger-icon"></ion-icon>
+        </nav>
+    </header>
+
+    <main class="main" role="main">
+        <section class="section home" id="home">
+            <div class="home__presentation">
+                <div class="theme">
+                    <ion-icon name="moon-outline" class="bi bi-brightness-high-fill" id="toggleDark"></ion-icon>
+                    <span id="themeText">Passer au thème sombre</span>
+                </div>
+
+                <div class="home__presentation-img">
+                    <img src="assets/img/design/hellothere.png" alt="">
+                </div>
+                <div class="home__presentation-title">
+                    <h1>I'm <span>Parfait Evans <br></span> Web Developer<br>Based in France.</h1>
+                </div>
+                <div class="home__presentation-description">
+                    <p>I'm A Web Developer having 2 years of experience in expertise of creating website with fully
+                        responsive Also with backend part too.</p>
+                </div>
+                <div class="home__presentation-buttons">
+                    <div class="btn-portfolio">
+                        <span class=""><a href="#projects">Voir mon portfolio</a></span>
+                        <span><a href="#projects"><ion-icon name="caret-forward-outline"></ion-icon></a></span>
+                    </div>
+                    <div class="btn-hire-me"><a href="#hire">M'embaucher</a></div>
+                </div>
+            </div>
+            <div class="home__img">
+                <img src="assets/img/design/me.png" alt="">
+            </div>
+        </section>
+
+        <div class="band">
+            <img src="assets/img/design/band.png" alt="">
+        </div>
+
+        <section class="section services" id="services">
+            <div class="group__title">
+                <span class="icon"><ion-icon name="remove-outline"></ion-icon></span>
+                <p class="text">Services</p>
+            </div>
+            <div class="services__titles">
+                <h2 class="text__title"><span>Services</span> I Provide</h2>
+                <div class="btn-services">
+                    <span class=""><a href="#contact">Contactez-moi</a></span>
+                    <span><a href="#contact"><ion-icon name="arrow-forward-outline"></ion-icon></a></span>
+                </div>
+            </div>
+            <div class="services__container">
+                <div class="services__container-card">
+                    <span class="logo"><ion-icon name="pencil-outline"></ion-icon></span>
+                    <h3>UI/UX Design</h3>
+                    <p class="description">Conçoit des interfaces intuitives et attrayantes avec des logiciels adaptés.
+                    </p>
+                    <div class="learn-more services__button">
+                        <p>Learn more</p>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </div>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <ion-icon name="close-outline" class="services__modal-close"></ion-icon>
+
+                            <h3 class="services__modal-title">UI/UX Designer</h3>
+                            <p class="services__modal-description">Je crée des interfaces utilisateur intuitives et
+                                des expériences interactives qui placent les besoins des utilisateurs au cœur de
+                                chaque projet.</p>
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">Je conçois des interfaces intuitives et
+                                        esthétiques.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">Je réalise des prototypes interactifs pour
+                                        tester vos idées.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">Je crée des design systems pour garantir la
+                                        cohérence.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">J’optimise l’expérience utilisateur de vos
+                                        applications.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">Je mène des tests utilisateurs pour améliorer
+                                        vos interfaces.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="services__container-card">
+                    <span class="logo"><ion-icon name="code-outline"></ion-icon></span>
+                    <h3>Web Development</h3>
+                    <p class="description">Crée des sites web interactifs et fonctionnels en utilisant les bons
+                        langages.</p>
+                    <div class="learn-more services__button">
+                        <p>Learn more</p>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </div>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <ion-icon name="close-outline" class="services__modal-close"></ion-icon>
+
+                            <h3 class="services__modal-title">Web Developer</h3>
+                            <p class="services__modal-description">Je conçois des sites web modernes et attrayants,
+                                optimisés pour une navigation fluide et un design responsive adapté à tous les
+                                appareils.</p>
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">Je crée des sites vitrines modernes et
+                                        responsives.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">Je développe des landing pages optimisées pour
+                                        vos conversions.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">Je conçois des boutiques en ligne faciles à
+                                        gérer.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">J’améliore la performance et le référencement de
+                                        vos sites.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">Je maintiens et mets à jour vos sites
+                                        régulièrement.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="services__container-card">
+                    <span class="logo"><ion-icon name="bug-outline"></ion-icon></span>
+                    <h3>Programmation</h3>
+                    <p class="description">Développe la logique et la gestion des données.</p>
+                    <div class="learn-more services__button">
+                        <p>Learn more</p>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </div>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <ion-icon name="close-outline" class="services__modal-close"></ion-icon>
+
+                            <h3 class="services__modal-title">Backend Developer</h3>
+                            <p class="services__modal-description">Je développe des systèmes backend robustes et
+                                sécurisés, garantissant une gestion efficace des données et des performances
+                                optimales
+                                pour vos applications.</p>
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">Je développe des bases de données fiables et
+                                        performantes.
+                                    </p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">J'utilise des API pour vos services.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">Je sécurise vos systèmes contre les failles
+                                        potentielles.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">Je crée des CMS adaptés à vos besoins.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <ion-icon name="checkmark-circle-outline" class="services__modal-icon"></ion-icon>
+                                    <p class="services__modal-info">J’intègre toujours de nouvelles solutions pour
+                                        vos
+                                        applications.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about" id="about">
+            <div class="about__img">
+                <img src="assets/img/design/about_me.png" alt="">
+            </div>
+            <div class="about__presentation">
+                <div class="group__title">
+                    <span class="icon"><ion-icon name="remove-outline"></ion-icon></span>
+                    <p class="text">About Me</p>
+                </div>
+                <h2 class="text__title">Who is <span>Parfait Evans?</span></h2>
+                <div class="about__presentation-description">
+                    <p>I'm A Web Developer having 2 years of experience in expertise of creating website with fully
+                        responsive Also with backend part too.</p>
+                </div>
+                <div class="about__presentation-infos">
+                    <div class="info">
+                        <h2>10+</h2>
+                        <p>Project Completed</p>
+                    </div>
+                    <div class="info">
+                        <h2>10+</h2>
+                        <p>Project Completed</p>
+                    </div>
+                    <div class="info">
+                        <h2>2+</h2>
+                        <p>Year's of Experience</p>
+                    </div>
+                </div>
+                <div class="about__presentation-button">
+                    <div class="btn-cv">
+                        <span class=""><a href="assets/pdf/PARFAIT_EVANS-CV_stage.pdf" download>Télécharger mon
+                                CV</a></span>
+                        <span><a href="assets/pdf/PARFAIT_EVANS-CV_stage.pdf" download><ion-icon
+                                    name="arrow-forward-outline"></ion-icon></a></span>
+                    </div>
+                    <p>Parfait Evans</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="section languages">
+            <div class="group__title">
+                <span class="icon"><ion-icon name="remove-outline"></ion-icon></span>
+                <p class="text">My favourite Languages</p>
+            </div>
+            <h2 class="text__title"><span>Exploring the Languages<br></span>Behind My Websites</h2>
+            <div class="languages__container">
+                <div class="card">
+                    <div class="card__container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <span class="language-text">HTML & CSS</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <span class="language-text">React</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <span class="language-text">Javascript</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <span class="language-text">PHP</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <span class="language-text">MySQL</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <span class="language-text">Python</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section portfolio" id="projects">
+            <div class="group__title">
+                <span class="icon"><ion-icon name="remove-outline"></ion-icon></span>
+                <p class="text">My Porfolio</p>
+            </div>
+            <div class="portfolio__titles">
+                <h2 class="text__title">My Latest <span>Projects</span></h2>
+                <div class="btn-services">
+                    <span class=""><a href="#contact">Contactez-moi</a></span>
+                    <span><a href="#contact"><ion-icon name="arrow-forward-outline"></ion-icon></a></span>
+                </div>
+            </div>
+            <div class="swiper">
+                <div class="card-container"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </section>
+        <section class="section education">
+            <div class="group__title">
+                <span class="icon"><ion-icon name="remove-outline"></ion-icon></span>
+                <p class="text">Education & Work</p>
+            </div>
+            <h2 class="text__title"><span>Academic and Professional</span>Journey</h2>
+            <div class="education__container">
+                <div class="education__container-card education">
+                    <div class="titles">
+                        <span class="icon"><ion-icon name="school"></ion-icon></span>
+                        <h3>Education</h3>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="infos">
+                        <div class="info">
+                            <p class="date">2023-2026</p>
+                            <h2>LA MANU - École supérieure des Métiers du numérique</h2>
+                            <p class="diplome">Bachelor Développement & IA</p>
+                        </div>
+                        <div class="info">
+                            <p class="date">2020-2023</p>
+                            <h2>Lycée Pierre d'Ailly</h2>
+                            <p class="diplome">Baccalauréat général</p>
+                        </div>
+                        <div class="info">
+                            <p class="date">2018-2020</p>
+                            <h2>Collège Ferdinand Bac (Compiègne)</h2>
+                            <p class="diplome">Brevet des collèges</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education__container-card experience">
+                    <div class="titles">
+                        <span class="icon"><ion-icon name="briefcase"></ion-icon></span>
+                        <h3>Work & Experience</h3>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="infos">
+                        <div class="info">
+                            <p class="date">Juillet 2024 - Août 2024</p>
+                            <h2>La Poste</h2>
+                            <p class="diplome">Facteur</p>
+                        </div>
+                        <div class="info">
+                            <p class="date">Avril 2024 - Juin 2024</p>
+                            <h2>Webanimus</h2>
+                            <p class="diplome">Stage en développement d'applications web</p>
+                        </div>
+                        <div class="info">
+                            <p class="date">Juillet 2023 - Septembre 2023</p>
+                            <h2>Bénévolat pour la bourse aux livres</h2>
+                            <p class="diplome">Lycée Pierre d'Ailly</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <img src="assets/img/design/band2.png" alt="">
+        <section class="hire" id="hire">
+            <h2 class="text__title">Let's create an <span>Amazing <br> Project </span>Together</h2>
+            <div class="btn-contact">
+                <span class=""><a href="#contact">Contactez-moi</a></span>
+                <span><a href="#contact"><ion-icon name="arrow-forward-outline"></ion-icon></a></span>
+            </div>
+        </section>
+        <img src="assets/img/design/buttons.png" alt="">
+        <section class="section contact" id="contact">
+            <div class="group__title">
+                <span class="icon"><ion-icon name="remove-outline"></ion-icon></span>
+                <p class="text">Contact Us</p>
+            </div>
+            <h2 class="text__title">Let's talk For <br><span>Your Next Projects</span></h2>
+            <div class="contact__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam distinctio,
+                aliquam odit eligendi dolorum similique debitis a fuga sit iste eaque dolores hic vitae officiis? A
+                consectetur et quasi recusandae.</div>
+
+            <div class="contact__medias">
+                <div class="media">
+                    <span class="media__icon"><ion-icon name="mail"></ion-icon></span>
+                    <p class="media__title">Email</p>
+                    <p class="media__data">fani.prft@gmail.com</p>
+                    <span class="media__button">
+                        <a href="mailto:fani.prft@gmail.com">
+                            Write me
+                            <ion-icon name="arrow-forward"></ion-icon>
+                        </a>
+                    </span>
+                </div>
+                <div class="media">
+                    <span class="media__icon"><ion-icon name="mail"></ion-icon></span>
+                    <p class="media__title">Whatsapp</p>
+                    <p class="media__data">06 52 90 64 86</p>
+                    <span class="media__button">
+                        <a href="https://wa.me/33652906486" target="_blank">
+                            Write me
+                            <ion-icon name="arrow-forward"></ion-icon>
+                        </a>
+                    </span>
+                </div>
+                <div class="media">
+                    <span class="media__icon"><ion-icon name="mail"></ion-icon></span>
+                    <p class="media__title">Linkedin</p>
+                    <p class="media__data">Evans Parfait</p>
+                    <span class="media__button">
+                        <a href="https://www.linkedin.com/in/evans-parfait-ab569a29b/" target="_blank">
+                            Write me
+                            <ion-icon name="arrow-forward"></ion-icon>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <img src="assets/img/design/band2.png" alt="">
+    <footer class="footer">
+        <div class="footer__titles">
+            <h2 class="text__title">Let's <span>Connect </span>There</h2>
+            <div class="btn-footer">
+                <span><a href="#projects">Voir mon portfolio</a></span>
+                <span><a href="#projects"><ion-icon name="arrow-forward-outline"></ion-icon></a></span>
+            </div>
+        </div>
+        <div class="footer__container">
+            <div class="col">
+                <div class="logos">
+                    <div class="logo">E</div>
+                    <p class="text">Evans<span>.</span></p>
+                </div>
+                <div class="my-description">
+                    <p>I'm A Web Developer having 2 years of experience in expertise of creating website with fully
+                        responsive Also with backend part too.</p>
+                </div>
+                <div class="social-medias">
+                    <ul class="medias-list">
+                        <li><a href="https://github.com/pevansfan"><ion-icon name="logo-github"></ion-icon></a></li>
+                        <li><a href="https://www.facebook.com/evans.prft/"><ion-icon
+                                    name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="https://www.instagram.com/evans.prft/"><ion-icon
+                                    name="logo-instagram"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <h2>Navigation</h2>
+                <ul class="footer-nav">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">À propos de</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2>Contact</h2>
+                <ul class="footer-contact">
+                    <li><a href="https://wa.me/33652906486" target="_blank">06 52 90 64 86</a></li>
+                    <li><a href="mailto:fani.prft@gmail.com">fani.prft@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/evans-parfait-ab569a29b/" target="_blank">Evans Parfait</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Lien vers le JS de Swiper -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

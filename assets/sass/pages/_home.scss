@@ -1,0 +1,87 @@
+@use '../base/mixins';
+@use '../base/variables';
+
+.home {
+    @include mixins.flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px;
+    width: 100%;
+    max-height: 100%;
+
+    &__presentation {
+        max-width: 1200px;
+        width: 100%;
+        &-img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: variables.$mb-2;
+        }
+
+        &-title {
+            font-size: variables.$biggest-font;
+            margin-bottom: variables.$mb-1;
+
+            h1 {
+                font-weight: variables.$font-medium;
+
+                span {
+                    font-style: italic;
+                    color: variables.$secondary-color;
+                    text-decoration: underline;
+                    text-underline-offset: 5px;
+                }
+            }
+        }
+
+        &-description {
+            margin-bottom: variables.$mb-1-5;
+            p {
+                color: variables.$secondary-text-color;
+                font-weight: variables.$font-medium;
+            }
+        }
+
+        &-buttons {
+            @include mixins.flex;
+            align-items: center;
+            gap: 10px;
+
+            .btn {
+                &-portfolio {
+                    @include mixins.flex;
+                    @include mixins.button(variables.$secondary-color, variables.$primary-color, variables.$normal-font-size);
+
+                    span:first-child {
+                        @include mixins.icon(variables.$primary-color, variables.$background-color, variables.$normal-font-size);
+                        padding: 15px 30px;
+                    }
+
+                    span:last-child {
+                        @include mixins.icon(variables.$background-color, variables.$primary-color, variables.$h2-font-size);
+                        padding: 15px;
+                    }
+
+                    a {
+                        @include mixins.flex;
+                        align-items: center;
+                    }
+                }
+
+                &-hire-me {
+                    @include mixins.flex;
+                    @include mixins.button(variables.$background-color, variables.$primary-color, variables.$normal-font-size);
+                    border: 2px solid variables.$primary-color;
+                    padding: 20px 30px;
+                    font-weight: variables.$font-medium;
+                    color: variables.$primary-color;
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}

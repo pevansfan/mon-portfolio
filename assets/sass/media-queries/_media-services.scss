@@ -1,0 +1,80 @@
+@use '../base/mixins';
+
+@media (max-width: 768px) {
+    .services {
+        &__container {
+            @include mixins.grid(2, 1fr);
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 568px) {
+    .services {
+        &__container {
+            @include mixins.grid(1, 1fr);
+            justify-content: center;
+            align-items: center;
+
+            &-card {
+                @include mixins.flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav__toggle {
+        right: initial;
+        left: 1.5rem;
+    }
+
+    .about__info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about__description {
+        padding: 0;
+    }
+
+    .services__modal-content {
+        padding: 4.5rem 1.5rem 2.5rem;
+    }
+
+    .services__modal-description {
+        padding: 0;
+    }
+
+    .contact__container,
+    .work__container {
+        grid-template-columns: 300px;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__socials {
+        margin-left: 0;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .footer__titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .services__content {
+        padding: 3.5rem;
+    }
+}

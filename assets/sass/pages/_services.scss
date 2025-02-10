@@ -1,0 +1,175 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.services {
+    margin-bottom: 150px;
+    &__titles {
+        @include mixins.flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: variables.$mb-3;
+        .btn-services {
+            @include mixins.flex;
+            @include mixins.button(variables.$secondary-color, variables.$primary-color, variables.$normal-font-size);
+
+            span:first-child {
+                @include mixins.icon(variables.$primary-color, variables.$background-color, variables.$normal-font-size);
+                padding: 15px 30px;
+            }
+
+            span:last-child {
+                @include mixins.icon(variables.$background-color, variables.$primary-color, variables.$h2-font-size);
+                padding: 15px;
+            }
+
+            a {
+                @include mixins.flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__container {
+        @include mixins.grid(3, 1fr);
+        gap: 20px;
+
+        &-card {
+            background-color: variables.$background-color;
+            box-shadow: variables.$box-shadow;
+            padding: 20px;
+            border-radius: 20px;
+
+            .logo {
+                ion-icon {
+                    padding: 15px;
+                    background-color: variables.$grey-color;
+                    border-radius: 50px;
+                    color: variables.$primary-color;
+                    font-size: variables.$h2-font-size;
+                    margin-bottom: variables.$mb-1;
+                }
+            }
+
+            h3 {
+                font-size: variables.$h2-font-size;
+                margin-bottom: variables.$mb-1;
+            }
+
+            .description {
+                font-size: variables.$normal-font-size;
+                color: variables.$secondary-text-color;
+                margin-bottom: variables.$mb-1-5;
+            }
+
+            .learn-more {
+                @include mixins.flex;
+                align-items: center;
+                gap: 10px;
+
+                p {
+                    color: variables.$primary-color;
+                    font-weight: 900;
+                }
+
+                span a{
+                    @include mixins.flex;
+                    align-items: center;
+                    color: variables.$secondary-color;
+                    transition: all .3s;
+                }
+
+                span a:hover,
+                p:hover span a {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+}
+
+.services__modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.services__modal-content {
+    width: 500px;
+    position: relative;
+    background-color: variables.$primary-color;
+    padding: 4.5rem 2.5rem;
+    border-radius: .5rem;
+    color: variables.$background-color;
+}
+
+.services__modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: variables.$secondary-color;
+    cursor: pointer;
+}
+
+.services__modal-title,
+.services__modal-description {
+    text-align: center;
+    line-height: 1.7;
+}
+
+.services__modal-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: variables.$mb-1;
+}
+
+.services__modal-description {
+    font-size: small;
+    padding: 0 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.services__modal-services li {
+    margin-bottom: variables.$mb-0-75;
+}
+
+.services__modal-service {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.services__modal-icon {
+    color: variables.$secondary-color;
+    font-size: 1.1rem;
+}
+
+.services__modal-info {
+    font-size: .875rem;
+}
+
+.services__button {
+    cursor: pointer;
+    
+    span {
+        display: flex;
+        align-items: center;
+        color: variables.$secondary-color;
+    }
+}
+
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+}

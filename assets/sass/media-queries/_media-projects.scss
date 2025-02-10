@@ -1,0 +1,20 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+@media (max-width: 1024px) {
+    .tag {
+        font-size: variables.$small-font-size;
+    }
+
+    .bottom-section p {
+        font-size: variables.$h3-font-size;
+    }
+}
+
+@media (max-width: 568px) {
+
+    .tags {
+        @include mixins.grid(2, 1fr);
+        flex-direction: column;
+    }
+}

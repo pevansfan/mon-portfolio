@@ -1,0 +1,10 @@
+@use '../base/mixins';
+
+@media (max-width: 768px) {
+    .education {
+        &__container {
+            @include mixins.grid(1, 1fr);
+            justify-content: center;
+        }
+    }
+}

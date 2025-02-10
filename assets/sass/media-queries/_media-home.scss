@@ -1,0 +1,89 @@
+/* ==================== VARIABLES RESPONSIVES ==================== */
+@use "../base/variables";
+@use '../base/mixins';
+
+
+/* Écrans extra larges (desktop haut de gamme, 1200px et plus) */
+@media (max-width: 1500px) {
+    .header__nav {
+        max-width: 1100px;
+        top: 20px;
+    }
+
+    .home {
+        flex-direction: column;
+        height: 100%;
+
+        &__presentation {
+            margin-top: 200px;
+            width: 100%;
+            text-align: center;
+
+            &-img {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &-title {
+                margin-bottom: variables.$mb-2;
+                text-align: center;
+            }
+
+            &-buttons {
+                justify-content: center;
+            }
+        }
+
+        &__img  {
+            @include mixins.flex;
+            justify-content: center;
+        }
+    }
+
+    // .about__presentation-infos {
+    //     grid-template-columns: repeat(2, 1fr);
+    // }
+
+    // .services__container {
+    //     grid-template-columns: repeat(2, 1fr);
+    // }
+}
+
+/* Tablettes et écrans moyens (768px - 1199px) */
+@media (max-width: 992px) {
+    .home__presentation-title {
+        font-size: variables.$h1-font-size;
+    }
+    // .header__burger {
+    //     display: flex;
+    // }
+
+    // .header__nav {
+    //     position: fixed;
+    //     top: 0;
+    //     left: -100%;
+    //     width: 100%;
+    //     height: 100vh;
+    //     background: #294425;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     justify-content: center;
+    //     transition: left 0.3s;
+    // }
+
+    // .header__nav.active {
+    //     left: 0;
+    // }
+
+    // .header__nav-list {
+    //     flex-direction: column;
+    //     row-gap: 20px;
+    //     text-align: center;
+    // }
+}
+
+@media (max-width: 598px) {
+    .home__presentation-buttons {
+        flex-direction: column;
+    }
+}
+

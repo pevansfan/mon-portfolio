@@ -1,0 +1,51 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.card-portfolio {
+    background: variables.$background-color;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    transition: transform 0.3s ease;
+
+}
+
+.card-portfolio:hover {
+    transform: translateY(-5px);
+    box-shadow: variables.$box-shadow;
+}
+
+.card-portfolio img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tag {
+    @include mixins.button(variables.$secondary-color, variables.$principal-text-color, variables.$small-font-size);
+    font-weight: variables.$font-bold;
+    padding: 10px 20px;
+}
+
+.bottom-section {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    margin-top: 12px;
+}
+.description {
+    font-size: variables.$h1-font-size;
+    line-height: 1.7;
+    font-weight: variables.$font-medium;
+}
+.btn {
+    @include mixins.icon(variables.$primary-color, variables.$secondary-color, variables.$h2-font-size);
+    @include mixins.flex;
+    align-items: center;
+    padding: 10px;
+}

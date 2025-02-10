@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .medias-list {
+        justify-content: center;
+    }
+}
